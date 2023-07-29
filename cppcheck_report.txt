@@ -1,0 +1,539 @@
+src/mjson.c:824:27: warning: Obsolete function 'alloca' called. In C99 and later it is recommended to use a variable length array instead. [allocaCalled]
+    char *path = (char *) alloca((size_t) klen + 1);
+                          ^
+src/mjson.c:848:27: warning: Obsolete function 'alloca' called. In C99 and later it is recommended to use a variable length array instead. [allocaCalled]
+    char *path = (char *) alloca((size_t) klen + 1);
+                          ^
+src/mjson.c:769:12: style: The scope of the variable 'base' can be reduced. [variableScope]
+    double base = 0.1;
+           ^
+src/mjson.c:820:34: style: The scope of the variable 't2' can be reduced. [variableScope]
+  int koff, klen, voff, vlen, t, t2, k, off = 0, len = 0, comma = 0;
+                                 ^
+src/mjson.c:65:23: style:inconclusive: Function 'mjson' argument 1 names different: declaration 'buf' definition 's'. [funcArgNamesDifferent]
+int mjson(const char *s, int len, mjson_cb_t cb, void *ud) {
+                      ^
+src/mjson.h:89:23: note: Function 'mjson' argument 1 names different: declaration 'buf' definition 's'.
+int mjson(const char *buf, int len, mjson_cb_t cb, void *ud);
+                      ^
+src/mjson.c:65:23: note: Function 'mjson' argument 1 names different: declaration 'buf' definition 's'.
+int mjson(const char *s, int len, mjson_cb_t cb, void *ud) {
+                      ^
+src/mjson.c:276:28: style:inconclusive: Function 'mjson_find' argument 1 names different: declaration 'buf' definition 's'. [funcArgNamesDifferent]
+int mjson_find(const char *s, int n, const char *jp, const char **tp, int *tl) {
+                           ^
+src/mjson.h:90:28: note: Function 'mjson_find' argument 1 names different: declaration 'buf' definition 's'.
+int mjson_find(const char *buf, int len, const char *jp, const char **tp,
+                           ^
+src/mjson.c:276:28: note: Function 'mjson_find' argument 1 names different: declaration 'buf' definition 's'.
+int mjson_find(const char *s, int n, const char *jp, const char **tp, int *tl) {
+                           ^
+src/mjson.c:276:35: style:inconclusive: Function 'mjson_find' argument 2 names different: declaration 'len' definition 'n'. [funcArgNamesDifferent]
+int mjson_find(const char *s, int n, const char *jp, const char **tp, int *tl) {
+                                  ^
+src/mjson.h:90:37: note: Function 'mjson_find' argument 2 names different: declaration 'len' definition 'n'.
+int mjson_find(const char *buf, int len, const char *jp, const char **tp,
+                                    ^
+src/mjson.c:276:35: note: Function 'mjson_find' argument 2 names different: declaration 'len' definition 'n'.
+int mjson_find(const char *s, int n, const char *jp, const char **tp, int *tl) {
+                                  ^
+src/mjson.c:284:34: style:inconclusive: Function 'mjson_get_number' argument 1 names different: declaration 'buf' definition 's'. [funcArgNamesDifferent]
+int mjson_get_number(const char *s, int len, const char *path, double *v) {
+                                 ^
+src/mjson.h:92:34: note: Function 'mjson_get_number' argument 1 names different: declaration 'buf' definition 's'.
+int mjson_get_number(const char *buf, int len, const char *path, double *v);
+                                 ^
+src/mjson.c:284:34: note: Function 'mjson_get_number' argument 1 names different: declaration 'buf' definition 's'.
+int mjson_get_number(const char *s, int len, const char *path, double *v) {
+                                 ^
+src/mjson.c:293:32: style:inconclusive: Function 'mjson_get_bool' argument 1 names different: declaration 'buf' definition 's'. [funcArgNamesDifferent]
+int mjson_get_bool(const char *s, int len, const char *path, int *v) {
+                               ^
+src/mjson.h:93:32: note: Function 'mjson_get_bool' argument 1 names different: declaration 'buf' definition 's'.
+int mjson_get_bool(const char *buf, int len, const char *path, int *v);
+                               ^
+src/mjson.c:293:32: note: Function 'mjson_get_bool' argument 1 names different: declaration 'buf' definition 's'.
+int mjson_get_bool(const char *s, int len, const char *path, int *v) {
+                               ^
+src/mjson.c:335:34: style:inconclusive: Function 'mjson_get_string' argument 1 names different: declaration 'buf' definition 's'. [funcArgNamesDifferent]
+int mjson_get_string(const char *s, int len, const char *path, char *to,
+                                 ^
+src/mjson.h:94:34: note: Function 'mjson_get_string' argument 1 names different: declaration 'buf' definition 's'.
+int mjson_get_string(const char *buf, int len, const char *path, char *to,
+                                 ^
+src/mjson.c:335:34: note: Function 'mjson_get_string' argument 1 names different: declaration 'buf' definition 's'.
+int mjson_get_string(const char *s, int len, const char *path, char *to,
+                                 ^
+src/mjson.c:343:31: style:inconclusive: Function 'mjson_get_hex' argument 1 names different: declaration 'buf' definition 's'. [funcArgNamesDifferent]
+int mjson_get_hex(const char *s, int len, const char *x, char *to, int n) {
+                              ^
+src/mjson.h:96:31: note: Function 'mjson_get_hex' argument 1 names different: declaration 'buf' definition 's'.
+int mjson_get_hex(const char *buf, int len, const char *path, char *to, int n);
+                              ^
+src/mjson.c:343:31: note: Function 'mjson_get_hex' argument 1 names different: declaration 'buf' definition 's'.
+int mjson_get_hex(const char *s, int len, const char *x, char *to, int n) {
+                              ^
+src/mjson.c:343:55: style:inconclusive: Function 'mjson_get_hex' argument 3 names different: declaration 'path' definition 'x'. [funcArgNamesDifferent]
+int mjson_get_hex(const char *s, int len, const char *x, char *to, int n) {
+                                                      ^
+src/mjson.h:96:57: note: Function 'mjson_get_hex' argument 3 names different: declaration 'path' definition 'x'.
+int mjson_get_hex(const char *buf, int len, const char *path, char *to, int n);
+                                                        ^
+src/mjson.c:343:55: note: Function 'mjson_get_hex' argument 3 names different: declaration 'path' definition 'x'.
+int mjson_get_hex(const char *s, int len, const char *x, char *to, int n) {
+                                                      ^
+src/mjson.c:371:43: style:inconclusive: Function 'mjson_base64_dec' argument 2 names different: declaration 'src_len' definition 'n'. [funcArgNamesDifferent]
+int mjson_base64_dec(const char *src, int n, char *dst, int dlen) {
+                                          ^
+src/mjson.h:106:43: note: Function 'mjson_base64_dec' argument 2 names different: declaration 'src_len' definition 'n'.
+int mjson_base64_dec(const char *src, int src_len, char *dst, int dst_len);
+                                          ^
+src/mjson.c:371:43: note: Function 'mjson_base64_dec' argument 2 names different: declaration 'src_len' definition 'n'.
+int mjson_base64_dec(const char *src, int n, char *dst, int dlen) {
+                                          ^
+src/mjson.c:371:61: style:inconclusive: Function 'mjson_base64_dec' argument 4 names different: declaration 'dst_len' definition 'dlen'. [funcArgNamesDifferent]
+int mjson_base64_dec(const char *src, int n, char *dst, int dlen) {
+                                                            ^
+src/mjson.h:106:67: note: Function 'mjson_base64_dec' argument 4 names different: declaration 'dst_len' definition 'dlen'.
+int mjson_base64_dec(const char *src, int src_len, char *dst, int dst_len);
+                                                                  ^
+src/mjson.c:371:61: note: Function 'mjson_base64_dec' argument 4 names different: declaration 'dst_len' definition 'dlen'.
+int mjson_base64_dec(const char *src, int n, char *dst, int dlen) {
+                                                            ^
+src/mjson.c:390:34: style:inconclusive: Function 'mjson_get_base64' argument 1 names different: declaration 'buf' definition 's'. [funcArgNamesDifferent]
+int mjson_get_base64(const char *s, int len, const char *path, char *to,
+                                 ^
+src/mjson.h:104:34: note: Function 'mjson_get_base64' argument 1 names different: declaration 'buf' definition 's'.
+int mjson_get_base64(const char *buf, int len, const char *path, char *dst,
+                                 ^
+src/mjson.c:390:34: note: Function 'mjson_get_base64' argument 1 names different: declaration 'buf' definition 's'.
+int mjson_get_base64(const char *s, int len, const char *path, char *to,
+                                 ^
+src/mjson.c:390:70: style:inconclusive: Function 'mjson_get_base64' argument 4 names different: declaration 'dst' definition 'to'. [funcArgNamesDifferent]
+int mjson_get_base64(const char *s, int len, const char *path, char *to,
+                                                                     ^
+src/mjson.h:104:72: note: Function 'mjson_get_base64' argument 4 names different: declaration 'dst' definition 'to'.
+int mjson_get_base64(const char *buf, int len, const char *path, char *dst,
+                                                                       ^
+src/mjson.c:390:70: note: Function 'mjson_get_base64' argument 4 names different: declaration 'dst' definition 'to'.
+int mjson_get_base64(const char *s, int len, const char *path, char *to,
+                                                                     ^
+src/mjson.c:391:26: style:inconclusive: Function 'mjson_get_base64' argument 5 names different: declaration 'dst_len' definition 'n'. [funcArgNamesDifferent]
+                     int n) {
+                         ^
+src/mjson.h:105:26: note: Function 'mjson_get_base64' argument 5 names different: declaration 'dst_len' definition 'n'.
+                     int dst_len);
+                         ^
+src/mjson.c:391:26: note: Function 'mjson_get_base64' argument 5 names different: declaration 'dst_len' definition 'n'.
+                     int n) {
+                         ^
+src/mjson.c:464:28: style:inconclusive: Function 'mjson_next' argument 1 names different: declaration 'buf' definition 's'. [funcArgNamesDifferent]
+int mjson_next(const char *s, int n, int off, int *koff, int *klen, int *voff,
+                           ^
+src/mjson.h:99:28: note: Function 'mjson_next' argument 1 names different: declaration 'buf' definition 's'.
+int mjson_next(const char *buf, int len, int offset, int *key_offset,
+                           ^
+src/mjson.c:464:28: note: Function 'mjson_next' argument 1 names different: declaration 'buf' definition 's'.
+int mjson_next(const char *s, int n, int off, int *koff, int *klen, int *voff,
+                           ^
+src/mjson.c:464:35: style:inconclusive: Function 'mjson_next' argument 2 names different: declaration 'len' definition 'n'. [funcArgNamesDifferent]
+int mjson_next(const char *s, int n, int off, int *koff, int *klen, int *voff,
+                                  ^
+src/mjson.h:99:37: note: Function 'mjson_next' argument 2 names different: declaration 'len' definition 'n'.
+int mjson_next(const char *buf, int len, int offset, int *key_offset,
+                                    ^
+src/mjson.c:464:35: note: Function 'mjson_next' argument 2 names different: declaration 'len' definition 'n'.
+int mjson_next(const char *s, int n, int off, int *koff, int *klen, int *voff,
+                                  ^
+src/mjson.c:464:42: style:inconclusive: Function 'mjson_next' argument 3 names different: declaration 'offset' definition 'off'. [funcArgNamesDifferent]
+int mjson_next(const char *s, int n, int off, int *koff, int *klen, int *voff,
+                                         ^
+src/mjson.h:99:46: note: Function 'mjson_next' argument 3 names different: declaration 'offset' definition 'off'.
+int mjson_next(const char *buf, int len, int offset, int *key_offset,
+                                             ^
+src/mjson.c:464:42: note: Function 'mjson_next' argument 3 names different: declaration 'offset' definition 'off'.
+int mjson_next(const char *s, int n, int off, int *koff, int *klen, int *voff,
+                                         ^
+src/mjson.c:464:52: style:inconclusive: Function 'mjson_next' argument 4 names different: declaration 'key_offset' definition 'koff'. [funcArgNamesDifferent]
+int mjson_next(const char *s, int n, int off, int *koff, int *klen, int *voff,
+                                                   ^
+src/mjson.h:99:59: note: Function 'mjson_next' argument 4 names different: declaration 'key_offset' definition 'koff'.
+int mjson_next(const char *buf, int len, int offset, int *key_offset,
+                                                          ^
+src/mjson.c:464:52: note: Function 'mjson_next' argument 4 names different: declaration 'key_offset' definition 'koff'.
+int mjson_next(const char *s, int n, int off, int *koff, int *klen, int *voff,
+                                                   ^
+src/mjson.c:464:63: style:inconclusive: Function 'mjson_next' argument 5 names different: declaration 'key_len' definition 'klen'. [funcArgNamesDifferent]
+int mjson_next(const char *s, int n, int off, int *koff, int *klen, int *voff,
+                                                              ^
+src/mjson.h:100:21: note: Function 'mjson_next' argument 5 names different: declaration 'key_len' definition 'klen'.
+               int *key_len, int *val_offset, int *val_len, int *vale_type);
+                    ^
+src/mjson.c:464:63: note: Function 'mjson_next' argument 5 names different: declaration 'key_len' definition 'klen'.
+int mjson_next(const char *s, int n, int off, int *koff, int *klen, int *voff,
+                                                              ^
+src/mjson.c:464:74: style:inconclusive: Function 'mjson_next' argument 6 names different: declaration 'val_offset' definition 'voff'. [funcArgNamesDifferent]
+int mjson_next(const char *s, int n, int off, int *koff, int *klen, int *voff,
+                                                                         ^
+src/mjson.h:100:35: note: Function 'mjson_next' argument 6 names different: declaration 'val_offset' definition 'voff'.
+               int *key_len, int *val_offset, int *val_len, int *vale_type);
+                                  ^
+src/mjson.c:464:74: note: Function 'mjson_next' argument 6 names different: declaration 'val_offset' definition 'voff'.
+int mjson_next(const char *s, int n, int off, int *koff, int *klen, int *voff,
+                                                                         ^
+src/mjson.c:465:21: style:inconclusive: Function 'mjson_next' argument 7 names different: declaration 'val_len' definition 'vlen'. [funcArgNamesDifferent]
+               int *vlen, int *vtype) {
+                    ^
+src/mjson.h:100:52: note: Function 'mjson_next' argument 7 names different: declaration 'val_len' definition 'vlen'.
+               int *key_len, int *val_offset, int *val_len, int *vale_type);
+                                                   ^
+src/mjson.c:465:21: note: Function 'mjson_next' argument 7 names different: declaration 'val_len' definition 'vlen'.
+               int *vlen, int *vtype) {
+                    ^
+src/mjson.c:465:32: style:inconclusive: Function 'mjson_next' argument 8 names different: declaration 'vale_type' definition 'vtype'. [funcArgNamesDifferent]
+               int *vlen, int *vtype) {
+                               ^
+src/mjson.h:100:66: note: Function 'mjson_next' argument 8 names different: declaration 'vale_type' definition 'vtype'.
+               int *key_len, int *val_offset, int *val_len, int *vale_type);
+                                                                 ^
+src/mjson.c:465:32: note: Function 'mjson_next' argument 8 names different: declaration 'vale_type' definition 'vtype'.
+               int *vlen, int *vtype) {
+                               ^
+src/mjson.c:520:54: style:inconclusive: Function 'mjson_print_null' argument 3 names different: declaration 'fn_data' definition 'userdata'. [funcArgNamesDifferent]
+int mjson_print_null(const char *ptr, int len, void *userdata) {
+                                                     ^
+src/mjson.h:131:54: note: Function 'mjson_print_null' argument 3 names different: declaration 'fn_data' definition 'userdata'.
+int mjson_print_null(const char *ptr, int len, void *fn_data);
+                                                     ^
+src/mjson.c:520:54: note: Function 'mjson_print_null' argument 3 names different: declaration 'fn_data' definition 'userdata'.
+int mjson_print_null(const char *ptr, int len, void *userdata) {
+                                                     ^
+src/mjson.c:526:48: style:inconclusive: Function 'mjson_print_buf' argument 2 names different: declaration 'fn_data' definition 'fnd'. [funcArgNamesDifferent]
+int mjson_print_buf(mjson_print_fn_t fn, void *fnd, const char *buf, int len) {
+                                               ^
+src/mjson.h:127:48: note: Function 'mjson_print_buf' argument 2 names different: declaration 'fn_data' definition 'fnd'.
+int mjson_print_buf(mjson_print_fn_t fn, void *fn_data, const char *buf,
+                                               ^
+src/mjson.c:526:48: note: Function 'mjson_print_buf' argument 2 names different: declaration 'fn_data' definition 'fnd'.
+int mjson_print_buf(mjson_print_fn_t fn, void *fnd, const char *buf, int len) {
+                                               ^
+src/mjson.c:530:49: style:inconclusive: Function 'mjson_print_long' argument 2 names different: declaration 'fn_data' definition 'fnd'. [funcArgNamesDifferent]
+int mjson_print_long(mjson_print_fn_t fn, void *fnd, long val, int is_signed) {
+                                                ^
+src/mjson.h:125:49: note: Function 'mjson_print_long' argument 2 names different: declaration 'fn_data' definition 'fnd'.
+int mjson_print_long(mjson_print_fn_t fn, void *fn_data, long value,
+                                                ^
+src/mjson.c:530:49: note: Function 'mjson_print_long' argument 2 names different: declaration 'fn_data' definition 'fnd'.
+int mjson_print_long(mjson_print_fn_t fn, void *fnd, long val, int is_signed) {
+                                                ^
+src/mjson.c:530:59: style:inconclusive: Function 'mjson_print_long' argument 3 names different: declaration 'value' definition 'val'. [funcArgNamesDifferent]
+int mjson_print_long(mjson_print_fn_t fn, void *fnd, long val, int is_signed) {
+                                                          ^
+src/mjson.h:125:63: note: Function 'mjson_print_long' argument 3 names different: declaration 'value' definition 'val'.
+int mjson_print_long(mjson_print_fn_t fn, void *fn_data, long value,
+                                                              ^
+src/mjson.c:530:59: note: Function 'mjson_print_long' argument 3 names different: declaration 'value' definition 'val'.
+int mjson_print_long(mjson_print_fn_t fn, void *fnd, long val, int is_signed) {
+                                                          ^
+src/mjson.c:545:48: style:inconclusive: Function 'mjson_print_int' argument 2 names different: declaration 'fn_data' definition 'fnd'. [funcArgNamesDifferent]
+int mjson_print_int(mjson_print_fn_t fn, void *fnd, int v, int s) {
+                                               ^
+src/mjson.h:123:48: note: Function 'mjson_print_int' argument 2 names different: declaration 'fn_data' definition 'fnd'.
+int mjson_print_int(mjson_print_fn_t fn, void *fn_data, int value,
+                                               ^
+src/mjson.c:545:48: note: Function 'mjson_print_int' argument 2 names different: declaration 'fn_data' definition 'fnd'.
+int mjson_print_int(mjson_print_fn_t fn, void *fnd, int v, int s) {
+                                               ^
+src/mjson.c:545:57: style:inconclusive: Function 'mjson_print_int' argument 3 names different: declaration 'value' definition 'v'. [funcArgNamesDifferent]
+int mjson_print_int(mjson_print_fn_t fn, void *fnd, int v, int s) {
+                                                        ^
+src/mjson.h:123:61: note: Function 'mjson_print_int' argument 3 names different: declaration 'value' definition 'v'.
+int mjson_print_int(mjson_print_fn_t fn, void *fn_data, int value,
+                                                            ^
+src/mjson.c:545:57: note: Function 'mjson_print_int' argument 3 names different: declaration 'value' definition 'v'.
+int mjson_print_int(mjson_print_fn_t fn, void *fnd, int v, int s) {
+                                                        ^
+src/mjson.c:545:64: style:inconclusive: Function 'mjson_print_int' argument 4 names different: declaration 'is_signed' definition 's'. [funcArgNamesDifferent]
+int mjson_print_int(mjson_print_fn_t fn, void *fnd, int v, int s) {
+                                                               ^
+src/mjson.h:124:25: note: Function 'mjson_print_int' argument 4 names different: declaration 'is_signed' definition 's'.
+                    int is_signed);
+                        ^
+src/mjson.c:545:64: note: Function 'mjson_print_int' argument 4 names different: declaration 'is_signed' definition 's'.
+int mjson_print_int(mjson_print_fn_t fn, void *fnd, int v, int s) {
+                                                               ^
+src/mjson.c:561:48: style:inconclusive: Function 'mjson_print_dbl' argument 2 names different: declaration 'fn_data' definition 'fnd'. [funcArgNamesDifferent]
+int mjson_print_dbl(mjson_print_fn_t fn, void *fnd, double d, int width) {
+                                               ^
+src/mjson.h:129:48: note: Function 'mjson_print_dbl' argument 2 names different: declaration 'fn_data' definition 'fnd'.
+int mjson_print_dbl(mjson_print_fn_t fn, void *fn_data, double d, int width);
+                                               ^
+src/mjson.c:561:48: note: Function 'mjson_print_dbl' argument 2 names different: declaration 'fn_data' definition 'fnd'.
+int mjson_print_dbl(mjson_print_fn_t fn, void *fnd, double d, int width) {
+                                               ^
+src/mjson.c:620:48: style:inconclusive: Function 'mjson_print_str' argument 2 names different: declaration 'fn_data' definition 'fnd'. [funcArgNamesDifferent]
+int mjson_print_str(mjson_print_fn_t fn, void *fnd, const char *s, int len) {
+                                               ^
+src/mjson.h:121:48: note: Function 'mjson_print_str' argument 2 names different: declaration 'fn_data' definition 'fnd'.
+int mjson_print_str(mjson_print_fn_t fn, void *fn_data, const char *buf,
+                                               ^
+src/mjson.c:620:48: note: Function 'mjson_print_str' argument 2 names different: declaration 'fn_data' definition 'fnd'.
+int mjson_print_str(mjson_print_fn_t fn, void *fnd, const char *s, int len) {
+                                               ^
+src/mjson.c:620:65: style:inconclusive: Function 'mjson_print_str' argument 3 names different: declaration 'buf' definition 's'. [funcArgNamesDifferent]
+int mjson_print_str(mjson_print_fn_t fn, void *fnd, const char *s, int len) {
+                                                                ^
+src/mjson.h:121:69: note: Function 'mjson_print_str' argument 3 names different: declaration 'buf' definition 's'.
+int mjson_print_str(mjson_print_fn_t fn, void *fn_data, const char *buf,
+                                                                    ^
+src/mjson.c:620:65: note: Function 'mjson_print_str' argument 3 names different: declaration 'buf' definition 's'.
+int mjson_print_str(mjson_print_fn_t fn, void *fnd, const char *s, int len) {
+                                                                ^
+src/mjson.c:651:46: style:inconclusive: Function 'mjson_vprintf' argument 2 names different: declaration 'fn_data' definition 'fnd'. [funcArgNamesDifferent]
+int mjson_vprintf(mjson_print_fn_t fn, void *fnd, const char *fmt,
+                                             ^
+src/mjson.h:119:46: note: Function 'mjson_vprintf' argument 2 names different: declaration 'fn_data' definition 'fnd'.
+int mjson_vprintf(mjson_print_fn_t fn, void *fn_data, const char *fmt,
+                                             ^
+src/mjson.c:651:46: note: Function 'mjson_vprintf' argument 2 names different: declaration 'fn_data' definition 'fnd'.
+int mjson_vprintf(mjson_print_fn_t fn, void *fnd, const char *fmt,
+                                             ^
+src/mjson.c:726:45: style:inconclusive: Function 'mjson_printf' argument 2 names different: declaration 'fn_data' definition 'fnd'. [funcArgNamesDifferent]
+int mjson_printf(mjson_print_fn_t fn, void *fnd, const char *fmt, ...) {
+                                            ^
+src/mjson.h:118:45: note: Function 'mjson_printf' argument 2 names different: declaration 'fn_data' definition 'fnd'.
+int mjson_printf(mjson_print_fn_t fn, void *fn_data, const char *fmt, ...);
+                                            ^
+src/mjson.c:726:45: note: Function 'mjson_printf' argument 2 names different: declaration 'fn_data' definition 'fnd'.
+int mjson_printf(mjson_print_fn_t fn, void *fnd, const char *fmt, ...) {
+                                            ^
+src/mjson.c:819:44: style:inconclusive: Function 'mjson_merge' argument 6 names different: declaration 'fn_data' definition 'userdata'. [funcArgNamesDifferent]
+                mjson_print_fn_t fn, void *userdata) {
+                                           ^
+src/mjson.h:145:44: note: Function 'mjson_merge' argument 6 names different: declaration 'fn_data' definition 'userdata'.
+                mjson_print_fn_t fn, void *fn_data);
+                                           ^
+src/mjson.c:819:44: note: Function 'mjson_merge' argument 6 names different: declaration 'fn_data' definition 'userdata'.
+                mjson_print_fn_t fn, void *userdata) {
+                                           ^
+src/mjson.c:930:24: style:inconclusive: Function 'mjson_pretty' argument 5 names different: declaration 'fn_data' definition 'userdata'. [funcArgNamesDifferent]
+                 void *userdata) {
+                       ^
+src/mjson.h:140:24: note: Function 'mjson_pretty' argument 5 names different: declaration 'fn_data' definition 'userdata'.
+                 void *fn_data);
+                       ^
+src/mjson.c:930:24: note: Function 'mjson_pretty' argument 5 names different: declaration 'fn_data' definition 'userdata'.
+                 void *userdata) {
+                       ^
+src/mjson.c:998:63: style:inconclusive: Function 'jsonrpc_ctx_process' argument 2 names different: declaration 'req' definition 'buf'. [funcArgNamesDifferent]
+void jsonrpc_ctx_process(struct jsonrpc_ctx *ctx, const char *buf, int len,
+                                                              ^
+src/mjson.h:199:63: note: Function 'jsonrpc_ctx_process' argument 2 names different: declaration 'req' definition 'buf'.
+void jsonrpc_ctx_process(struct jsonrpc_ctx *ctx, const char *req, int req_sz,
+                                                              ^
+src/mjson.c:998:63: note: Function 'jsonrpc_ctx_process' argument 2 names different: declaration 'req' definition 'buf'.
+void jsonrpc_ctx_process(struct jsonrpc_ctx *ctx, const char *buf, int len,
+                                                              ^
+src/mjson.c:998:72: style:inconclusive: Function 'jsonrpc_ctx_process' argument 3 names different: declaration 'req_sz' definition 'len'. [funcArgNamesDifferent]
+void jsonrpc_ctx_process(struct jsonrpc_ctx *ctx, const char *buf, int len,
+                                                                       ^
+src/mjson.h:199:72: note: Function 'jsonrpc_ctx_process' argument 3 names different: declaration 'req_sz' definition 'len'.
+void jsonrpc_ctx_process(struct jsonrpc_ctx *ctx, const char *req, int req_sz,
+                                                                       ^
+src/mjson.c:998:72: note: Function 'jsonrpc_ctx_process' argument 3 names different: declaration 'req_sz' definition 'len'.
+void jsonrpc_ctx_process(struct jsonrpc_ctx *ctx, const char *buf, int len,
+                                                                       ^
+src/mjson.c:999:68: style:inconclusive: Function 'jsonrpc_ctx_process' argument 6 names different: declaration 'userdata' definition 'ud'. [funcArgNamesDifferent]
+                         mjson_print_fn_t fn, void *fn_data, void *ud) {
+                                                                   ^
+src/mjson.h:200:68: note: Function 'jsonrpc_ctx_process' argument 6 names different: declaration 'userdata' definition 'ud'.
+                         mjson_print_fn_t fn, void *fn_data, void *userdata);
+                                                                   ^
+src/mjson.c:999:68: note: Function 'jsonrpc_ctx_process' argument 6 names different: declaration 'userdata' definition 'ud'.
+                         mjson_print_fn_t fn, void *fn_data, void *ud) {
+                                                                   ^
+src/mjson.c:1061:55: style:inconclusive: Function 'jsonrpc_init' argument 2 names different: declaration 'fn_data' definition 'userdata'. [funcArgNamesDifferent]
+void jsonrpc_init(mjson_print_fn_t response_cb, void *userdata) {
+                                                      ^
+src/mjson.h:152:55: note: Function 'jsonrpc_init' argument 2 names different: declaration 'fn_data' definition 'userdata'.
+void jsonrpc_init(mjson_print_fn_t response_cb, void *fn_data);
+                                                      ^
+src/mjson.c:1061:55: note: Function 'jsonrpc_init' argument 2 names different: declaration 'fn_data' definition 'userdata'.
+void jsonrpc_init(mjson_print_fn_t response_cb, void *userdata) {
+                                                      ^
+test/unit_test.c:437:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 0.0, "0");
+  ^
+test/unit_test.c:438:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 0.123, "0.123");
+  ^
+test/unit_test.c:439:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 0.00123, "0.00123");
+  ^
+test/unit_test.c:440:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 0.123456333, "0.123456");
+  ^
+test/unit_test.c:441:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 123.0, "123");
+  ^
+test/unit_test.c:442:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 11.5454, "11.5454");
+  ^
+test/unit_test.c:443:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 11.0001, "11.0001");
+  ^
+test/unit_test.c:444:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 0.999, "0.999");
+  ^
+test/unit_test.c:445:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 0.999999, "0.999999");
+  ^
+test/unit_test.c:446:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 0.9999999, "1");
+  ^
+test/unit_test.c:447:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 10.9, "10.9");
+  ^
+test/unit_test.c:448:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 10.01, "10.01");
+  ^
+test/unit_test.c:449:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 1.0, "1");
+  ^
+test/unit_test.c:450:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 10.0, "10");
+  ^
+test/unit_test.c:451:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 100.0, "100");
+  ^
+test/unit_test.c:452:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 1000.0, "1000");
+  ^
+test/unit_test.c:453:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 10000.0, "10000");
+  ^
+test/unit_test.c:454:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 100000.0, "100000");
+  ^
+test/unit_test.c:455:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 1000000.0, "1e+06");
+  ^
+test/unit_test.c:456:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 10000000.0, "1e+07");
+  ^
+test/unit_test.c:457:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 100000001.0, "1e+08");
+  ^
+test/unit_test.c:458:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 10.5454, "10.5454");
+  ^
+test/unit_test.c:459:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 999999.0, "999999");
+  ^
+test/unit_test.c:460:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 9999999.0, "1e+07");
+  ^
+test/unit_test.c:461:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 44556677.0, "4.45567e+07");
+  ^
+test/unit_test.c:462:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 1234567.2, "1.23457e+06");
+  ^
+test/unit_test.c:463:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", -987.65432, "-987.654");
+  ^
+test/unit_test.c:464:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 0.0000000001, "1e-10");
+  ^
+test/unit_test.c:465:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 2.34567e-57, "2.34567e-57");
+  ^
+test/unit_test.c:466:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%.*g", DBLWIDTH(7, 9999999.0), "9999999");
+  ^
+test/unit_test.c:467:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%.*g", DBLWIDTH(10, 0.123456333), "0.123456333");
+  ^
+test/unit_test.c:468:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 123.456222, "123.456");
+  ^
+test/unit_test.c:469:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%.*g", DBLWIDTH(10, 123.456222), "123.456222");
+  ^
+test/unit_test.c:470:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 600.1234, "600.123");
+  ^
+test/unit_test.c:471:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", -600.1234, "-600.123");
+  ^
+test/unit_test.c:472:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", 599.1234, "599.123");
+  ^
+test/unit_test.c:473:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", -599.1234, "-599.123");
+  ^
+test/unit_test.c:476:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", (double) INFINITY, "inf");
+  ^
+test/unit_test.c:477:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", (double) -INFINITY, "-inf");
+  ^
+test/unit_test.c:478:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", (double) NAN, "nan");
+  ^
+test/unit_test.c:299:7: style: Local variable 'foo' shadows outer function [shadowFunction]
+    } foo;
+      ^
+test/unit_test.c:583:13: note: Shadowed declaration
+static void foo(struct jsonrpc_request *r) {
+            ^
+test/unit_test.c:299:7: note: Shadow variable
+    } foo;
+      ^
+test/unit_test.c:729:33: error: Uninitialized variable: buf [uninitvar]
+    struct mjson_fixedbuf fb = {buf, sizeof(buf), 0};
+                                ^
+test/unit_test.c:480:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", HUGE_VAL, "inf");
+  ^
+test/unit_test.c:481:3: style: The scope of the variable 'N' can be reduced. [variableScope]
+  TESTDOUBLE("%g", -HUGE_VAL, "-inf");
+  ^
+src/mjson.c:278:45: error: Using argument tl that points at uninitialized variable n [ctuuninitvar]
+                                0,  -1, tp, tl, MJSON_TOK_INVALID};
+                                            ^
+src/mjson.c:287:24: note: Calling function mjson_find, 5th argument is uninitialized
+  if ((tok = mjson_find(s, len, path, &p, &n)) == MJSON_TOK_NUMBER) {
+                       ^
+src/mjson.c:278:45: note: Using argument tl
+                                0,  -1, tp, tl, MJSON_TOK_INVALID};
+                                            ^
+src/mjson.c:466:57: error: Using argument voff that points at uninitialized variable voff [ctuuninitvar]
+  struct nextdata d = {off, 0, 0, 0, 0, -1, koff, klen, voff, vlen, vtype};
+                                                        ^
+src/mjson.c:823:27: note: Calling function mjson_next, 6th argument is uninitialized
+  while ((off = mjson_next(s, n, off, &koff, &klen, &voff, &vlen, &t)) != 0) {
+                          ^
+src/mjson.c:466:57: note: Using argument voff
+  struct nextdata d = {off, 0, 0, 0, 0, -1, koff, klen, voff, vlen, vtype};
+                                                        ^
+src/mjson.c:466:63: error: Using argument vlen that points at uninitialized variable vlen [ctuuninitvar]
+  struct nextdata d = {off, 0, 0, 0, 0, -1, koff, klen, voff, vlen, vtype};
+                                                              ^
+src/mjson.c:823:27: note: Calling function mjson_next, 7th argument is uninitialized
+  while ((off = mjson_next(s, n, off, &koff, &klen, &voff, &vlen, &t)) != 0) {
+                          ^
+src/mjson.c:466:63: note: Using argument vlen
+  struct nextdata d = {off, 0, 0, 0, 0, -1, koff, klen, voff, vlen, vtype};
+                                                              ^
+src/mjson.c:466:69: error: Using argument vtype that points at uninitialized variable t [ctuuninitvar]
+  struct nextdata d = {off, 0, 0, 0, 0, -1, koff, klen, voff, vlen, vtype};
+                                                                    ^
+src/mjson.c:823:27: note: Calling function mjson_next, 8th argument is uninitialized
+  while ((off = mjson_next(s, n, off, &koff, &klen, &voff, &vlen, &t)) != 0) {
+                          ^
+src/mjson.c:466:69: note: Using argument vtype
+  struct nextdata d = {off, 0, 0, 0, 0, -1, koff, klen, voff, vlen, vtype};
+                                                                    ^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
